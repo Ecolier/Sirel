@@ -1,10 +1,10 @@
 # Sireley
 
-A Simple Cross-platform Request Library
+Sireley is a SImple, cross-platform, REquest LibrarY
 
 ## Basic Usage
 
-Creating request, sending it and handling the response is a straightforward process that requires minimal boilerplate code.
+Creating a request, sending it and handling the response is a straightforward process that requires minimal boilerplate code.
 Here is a piece of code that creates an empty request, sends it to localhost and handles a response.
 
 ```c
