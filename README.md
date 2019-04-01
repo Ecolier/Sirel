@@ -1,6 +1,6 @@
-# Sireley
+# Sirel
 
-Sireley is a SImple, cross-platform, REquest LibrarY
+Sirel is a Simple, cross-platform, Request Library
 
 ## Basic Usage
 
