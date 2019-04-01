@@ -1,10 +1,10 @@
 # Sirel
 
-A Simple Cross-platform Request Library
+Sirel is a Simple, cross-platform, Request Library
 
 ## Basic Usage
 
-Creating request, sending it and handling the response is a straightforward process that requires minimal boilerplate code.
+Creating a request, sending it and handling the response is a straightforward process that requires minimal boilerplate code.
 Here is a piece of code that creates an empty request, sends it to localhost and handles a response.
 
 ```c
