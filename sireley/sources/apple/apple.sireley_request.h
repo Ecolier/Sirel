@@ -1,11 +1,11 @@
-#ifndef SIRELEY_PLATFORM_TYPES_H
-#define SIRELEY_PLATFORM_TYPES_H
+#ifndef SIRELEY_APPLE_REQUEST_H
+#define SIRELEY_APPLE_REQUEST_H
 
-#include <platform/platform.sireley_types.h>
-#include <Foundation/Foundation.h>
+#include <Foundation/NSURLRequest.h>
+#include "private/private.sireley_request.h"
 
-struct SRL_Platform_Request {
+struct SRL_Request_Private {
   NSMutableURLRequest *request_;
 };
 
-#endif // SIRELEY_PLATFORM_TYPES_H
+#endif // SIRELEY_APPLE_REQUEST_H

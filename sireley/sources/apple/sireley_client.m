@@ -1,14 +1,12 @@
-#include <apple.sireley_client.h>
-#include <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+#import "apple.sireley_request.h"
+#import "sireley_client.h"
 
-#include <platform/platform.sireley_request.h>
-#include "apple.sireley_request.h"
-
-void SRL_Platform_fetch(struct SRL_Request *request, SRL_Response_Callback callback) {
-  NSURLSession *session = [NSURLSession sharedSession];
-  NSURLSessionDataTask *task = [session dataTaskWithRequest: request->platform_request_->r
-  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-  callback(0);
-}];
+void SRL_submit(struct SRL_Request *request, SRL_Submit_Callback callback) {
+  NSMutableURLRequest *req = request->private_->request_;
+  NSURLSession *shared = [NSURLSession sharedSession];
+  NSURLSessionDataTask *task = [shared dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    callback(0);
+  }];
   [task resume];
 }
