@@ -3,21 +3,31 @@ project(sireley_lib)
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 
-file(GLOB headers sireley.h sireley_client.h sireley_types.h sireley_request.h sireley_response.h
-        private/private.sireley_request.h private/platform.sireley_client.h private/platform.sireley_types.h)
-file(GLOB sources sources/sireley_request.c)
-
+# add a platform here to implement your own version of Sireley
 if (APPLE)
-    set(CMAKE_C_FLAGS "-x objective-c")
-    list(APPEND sources sources/apple/apple.sireley_request.m sources/apple/sireley_client.m)
-endif ()
+    add_subdirectory(platform/apple)
+endif()
 
-file(GLOB files ${headers} ${sources})
+set(headers
+
+        # public headers
+        sireley.h
+        sireley_client.h
+        sireley_types.h
+        sireley_request.h
+        sireley_response.h
+
+        #private headers
+        private/sireley_request_private.h)
+
+set(sources sources/sireley_request.c)
+
+list(APPEND files ${headers} ${sources})
+list(APPEND files ${headers} ${sireley_platform_files})
+
+message(${sireley_platform_files})
+
 add_library(${PROJECT_NAME} ${files})
 
-if (APPLE)
-target_link_libraries(${PROJECT_NAME}
-        "-framework Cocoa"
-        "-framework Foundation"
-        )
-endif ()
+# link platform specific libraries
+target_link_libraries(${PROJECT_NAME} ${sireley_platform_libs})

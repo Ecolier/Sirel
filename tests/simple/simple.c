@@ -1,11 +1,10 @@
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 #include <sireley/sireley.h>
 
 void handle_response(struct SRL_Response *response) {
-  printf("got response!");
+  // handle the response here
 }
 
 int main(int argc, char *argv[]) {
@@ -15,6 +14,4 @@ int main(int argc, char *argv[]) {
   SRL_Request_create(url, strlen(url), &request);
 
   SRL_submit(request, handle_response);
-
-  while (1) { }
 }

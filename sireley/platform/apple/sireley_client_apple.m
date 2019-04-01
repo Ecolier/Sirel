@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "apple.sireley_request.h"
+#import "sireley_request_apple.h"
 #import "sireley_client.h"
 
 void SRL_submit(struct SRL_Request *request, SRL_Submit_Callback callback) {

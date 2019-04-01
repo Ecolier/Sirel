@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "apple.sireley_request.h"
+#import "sireley_request_apple.h"
 
 NSString *str_to_ns(const char* str, size_t len) {
   return [[[NSString alloc] initWithData:

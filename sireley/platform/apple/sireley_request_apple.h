@@ -2,7 +2,7 @@
 #define SIRELEY_APPLE_REQUEST_H
 
 #include <Foundation/NSURLRequest.h>
-#include "private/private.sireley_request.h"
+#include "private/sireley_request_private.h"
 
 struct SRL_Request_Private {
   NSMutableURLRequest *request_;

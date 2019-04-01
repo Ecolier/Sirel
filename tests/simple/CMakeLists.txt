@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
 project(sireley_test_simple)
-include_directories()
 add_executable(${PROJECT_NAME} simple.c)
 include_directories(${sireley_project_root_path})
 target_link_libraries(${PROJECT_NAME} sireley_lib)
