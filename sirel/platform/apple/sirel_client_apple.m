@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "sireley_request_apple.h"
-#import "sireley_client.h"
+#import "sirel_request_apple.h"
+#import "sirel_client.h"
 
 void SRL_submit(struct SRL_Request *request, SRL_Submit_Callback callback) {
   NSMutableURLRequest *req = request->private_->request_;

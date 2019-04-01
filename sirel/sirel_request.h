@@ -1,7 +1,7 @@
-#ifndef SIRELEY_REQUEST_H
-#define SIRELEY_REQUEST_H
+#ifndef SIREL_REQUEST_H
+#define SIREL_REQUEST_H
 
-#include "sireley_types.h"
+#include "sirel_types.h"
 
 /**
  * Create a request using a single string, for instance:
@@ -12,4 +12,4 @@ void SRL_Request_create_raw(const char* raw, size_t raw_length, struct SRL_Reque
 void SRL_Request_create(const char *url, size_t url_length, struct SRL_Request **request);
 void SRL_Request_delete(struct SRL_Request *request);
 
-#endif // SIRELEY_REQUEST_H
+#endif // SIREL_REQUEST_H

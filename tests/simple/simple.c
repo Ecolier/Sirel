@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <sireley/sireley.h>
+#include <sirel/sirel.h>
 
 void handle_response(struct SRL_Response *response) {
   // handle the response here

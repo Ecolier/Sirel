@@ -1,5 +1,5 @@
-#ifndef SIRELEY_TYPES_H
-#define SIRELEY_TYPES_H
+#ifndef SIREL_TYPES_H
+#define SIREL_TYPES_H
 
 /**
  * includes size_t and a bunch of useful types
@@ -11,4 +11,4 @@ struct SRL_Response;
 
 typedef void(*SRL_Submit_Callback)(struct SRL_Response *response);
 
-#endif // SIRELEY_TYPES_H
+#endif // SIREL_TYPES_H

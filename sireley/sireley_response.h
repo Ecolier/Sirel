@@ -1,5 +1,0 @@
-#ifndef SIRELEY_RESPONSE_H
-#define SIRELEY_RESPONSE_H
-
-
-#endif // SIRELEY_RESPONSE_H

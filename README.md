@@ -1,4 +1,4 @@
-# Sireley
+# Sirel
 
 A Simple Cross-platform Request Library
 
@@ -11,7 +11,7 @@ Here is a piece of code that creates an empty request, sends it to localhost and
 #include <string.h>
 #include <stdlib.h>
 
-#include <sireley/sireley.h>
+#include <sirel/sirel.h>
 
 void handle_response(struct SRL_Response *response) {
   // handle the response object here
