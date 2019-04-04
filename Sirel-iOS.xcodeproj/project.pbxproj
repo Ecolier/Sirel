@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20C78D8B2253652E00257155 /* sirel.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D8A2253652E00257155 /* sirel.h */; };
+		20C78D902253656600257155 /* sirel_client.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D8C2253656600257155 /* sirel_client.h */; };
+		20C78D912253656600257155 /* sirel_types.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D8D2253656600257155 /* sirel_types.h */; };
+		20C78D922253656600257155 /* sirel_response.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D8E2253656600257155 /* sirel_response.h */; };
+		20C78D932253656600257155 /* sirel_request.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D8F2253656600257155 /* sirel_request.h */; };
+		20C78D972253658000257155 /* sirel_client_apple.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D942253658000257155 /* sirel_client_apple.m */; };
+		20C78D982253658000257155 /* sirel_request_apple.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D952253658000257155 /* sirel_request_apple.h */; };
+		20C78D992253658000257155 /* sirel_request_apple.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D962253658000257155 /* sirel_request_apple.m */; };
+		20C78D9B2253658E00257155 /* sirel_request.c in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D9A2253658E00257155 /* sirel_request.c */; };
+		20C78D9D2253659500257155 /* sirel_request_private.h in Sources */ = {isa = PBXBuildFile; fileRef = 20C78D9C2253659500257155 /* sirel_request_private.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20C78D67225359A200257155 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		20C78D69225359A200257155 /* libSirel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSirel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C78D8A2253652E00257155 /* sirel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel.h; path = sirel/sirel.h; sourceTree = "<group>"; };
+		20C78D8C2253656600257155 /* sirel_client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_client.h; path = sirel/sirel_client.h; sourceTree = "<group>"; };
+		20C78D8D2253656600257155 /* sirel_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_types.h; path = sirel/sirel_types.h; sourceTree = "<group>"; };
+		20C78D8E2253656600257155 /* sirel_response.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_response.h; path = sirel/sirel_response.h; sourceTree = "<group>"; };
+		20C78D8F2253656600257155 /* sirel_request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_request.h; path = sirel/sirel_request.h; sourceTree = "<group>"; };
+		20C78D942253658000257155 /* sirel_client_apple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = sirel_client_apple.m; path = sirel/platform/apple/sirel_client_apple.m; sourceTree = "<group>"; };
+		20C78D952253658000257155 /* sirel_request_apple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_request_apple.h; path = sirel/platform/apple/sirel_request_apple.h; sourceTree = "<group>"; };
+		20C78D962253658000257155 /* sirel_request_apple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = sirel_request_apple.m; path = sirel/platform/apple/sirel_request_apple.m; sourceTree = "<group>"; };
+		20C78D9A2253658E00257155 /* sirel_request.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = sirel_request.c; path = sirel/sources/sirel_request.c; sourceTree = "<group>"; };
+		20C78D9C2253659500257155 /* sirel_request_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sirel_request_private.h; path = sirel/private/sirel_request_private.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20C78D66225359A200257155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20C78D5E2253595700257155 = {
+			isa = PBXGroup;
+			children = (
+				20C78D9C2253659500257155 /* sirel_request_private.h */,
+				20C78D9A2253658E00257155 /* sirel_request.c */,
+				20C78D942253658000257155 /* sirel_client_apple.m */,
+				20C78D952253658000257155 /* sirel_request_apple.h */,
+				20C78D962253658000257155 /* sirel_request_apple.m */,
+				20C78D8C2253656600257155 /* sirel_client.h */,
+				20C78D8F2253656600257155 /* sirel_request.h */,
+				20C78D8E2253656600257155 /* sirel_response.h */,
+				20C78D8D2253656600257155 /* sirel_types.h */,
+				20C78D8A2253652E00257155 /* sirel.h */,
+				20C78D6A225359A200257155 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20C78D6A225359A200257155 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20C78D69225359A200257155 /* libSirel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20C78D68225359A200257155 /* Sirel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C78D70225359A200257155 /* Build configuration list for PBXNativeTarget "Sirel" */;
+			buildPhases = (
+				20C78D65225359A200257155 /* Sources */,
+				20C78D66225359A200257155 /* Frameworks */,
+				20C78D67225359A200257155 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sirel;
+			productName = Sirel;
+			productReference = 20C78D69225359A200257155 /* libSirel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20C78D5F2253595700257155 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					20C78D68225359A200257155 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 20C78D622253595700257155 /* Build configuration list for PBXProject "Sirel-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20C78D5E2253595700257155;
+			productRefGroup = 20C78D6A225359A200257155 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20C78D68225359A200257155 /* Sirel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20C78D65225359A200257155 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C78D8B2253652E00257155 /* sirel.h in Sources */,
+				20C78D902253656600257155 /* sirel_client.h in Sources */,
+				20C78D912253656600257155 /* sirel_types.h in Sources */,
+				20C78D922253656600257155 /* sirel_response.h in Sources */,
+				20C78D932253656600257155 /* sirel_request.h in Sources */,
+				20C78D972253658000257155 /* sirel_client_apple.m in Sources */,
+				20C78D982253658000257155 /* sirel_request_apple.h in Sources */,
+				20C78D992253658000257155 /* sirel_request_apple.m in Sources */,
+				20C78D9B2253658E00257155 /* sirel_request.c in Sources */,
+				20C78D9D2253659500257155 /* sirel_request_private.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		20C78D632253595700257155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/sirel/";
+			};
+			name = Debug;
+		};
+		20C78D642253595700257155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/sirel/";
+			};
+			name = Release;
+		};
+		20C78D71225359A200257155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = HAW4WKD64R;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/sirel";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20C78D72225359A200257155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HAW4WKD64R;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/sirel";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20C78D622253595700257155 /* Build configuration list for PBXProject "Sirel-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C78D632253595700257155 /* Debug */,
+				20C78D642253595700257155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C78D70225359A200257155 /* Build configuration list for PBXNativeTarget "Sirel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C78D71225359A200257155 /* Debug */,
+				20C78D72225359A200257155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20C78D5F2253595700257155 /* Project object */;
+}

@@ -14,4 +14,6 @@ int main(int argc, char *argv[]) {
   SRL_Request_create(url, strlen(url), &request);
 
   SRL_submit(request, handle_response);
+
+  while (1) { }
 }

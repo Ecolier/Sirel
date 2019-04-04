@@ -12,4 +12,7 @@ void SRL_Request_create_raw(const char* raw, size_t raw_length, struct SRL_Reque
 void SRL_Request_create(const char *url, size_t url_length, struct SRL_Request **request);
 void SRL_Request_delete(struct SRL_Request *request);
 
+void SRL_Request_set_method(struct SRL_Request *request, const char *method, size_t method_length);
+void SRL_Request_set_data(struct SRL_Request *request, const char *data, size_t data_length);
+
 #endif // SIREL_REQUEST_H
