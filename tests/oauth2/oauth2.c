@@ -3,11 +3,10 @@
 
 #include "oauth2.h"
 
-#include <sirel/sirel_request.h>
-#include <sirel/sirel_client.h>
+#include <sirel/http/http_request.h>
 
 struct SRLO2_Request {
-  struct SRL_Request *base_request;
+  struct SRL_Http_Request *base_request;
 };
 
 void SRLO2_token_with_credentials(const char* url, size_t url_length,
@@ -19,7 +18,7 @@ void SRLO2_token_with_credentials(const char* url, size_t url_length,
   // Setting data manually is quite a pain in C...
   const char *fixed_data = "grant_type=password&username=&password=&client_id=";
   size_t fixed_data_length = strlen(fixed_data);
-  size_t args_data_length = username_length + password_length + client_id_length;
+  size_t args_data_length =  username_length + password_length + client_id_length;
   size_t full_data_length = fixed_data_length + args_data_length;
   char *data = malloc(full_data_length);
   strcat(data, "grant_type=password&username=");
@@ -34,12 +33,12 @@ void SRLO2_token_with_credentials(const char* url, size_t url_length,
 
   // Allocate space on the stack
   struct SRLO2_Request *out_request = malloc(sizeof(out_request));
-  struct SRL_Request   *base_request = malloc(sizeof(base_request));
+  struct SRL_Http_Request *base_request = malloc(sizeof(base_request));
 
   // Initialize the base request
-  SRL_Request_create(url, url_length, &base_request);
-  SRL_Request_set_method(base_request, method, strlen(method));
-  SRL_Request_set_data(base_request, data, full_data_length);
+  SRL_create_http_request(url, url_length, &base_request);
+  SRL_set_http_request_method(base_request, method, strlen(method));
+  SRL_set_http_request_body(base_request, data, full_data_length);
 
   // Initialize the OAuth2 request
   out_request->base_request = base_request;
@@ -68,7 +67,7 @@ int main(int argc, char *argv[]) {
       client_id, strlen(client_id),
       &request);
 
-  SRL_submit(request->base_request, handle_response);
+  SRL_send_http_request(request->base_request, handle_response);
 
   while (1) { }
 }

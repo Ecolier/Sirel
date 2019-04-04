@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.13)
-project(sirel_complete)
 
-set(sirel_project_root_path ${CMAKE_CURRENT_LIST_DIR})
+set(sirel_root_dir ${CMAKE_CURRENT_LIST_DIR})
 
+# Library
 add_subdirectory(sirel)
 
 # Tests

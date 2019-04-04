@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
 project(sirel_test_oauth2)
 add_executable(${PROJECT_NAME} oauth2.c oauth2.h)
-include_directories(${sirel_project_root_path})
-target_link_libraries(${PROJECT_NAME} sirel_lib)
+include_directories(${sirel_root_dir})
+target_link_libraries(${PROJECT_NAME} sirel_http)
