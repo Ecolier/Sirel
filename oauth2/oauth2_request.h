@@ -63,4 +63,19 @@ typedef struct oauth2_completion_t {
 void request_oauth2_token(const char *url, size_t url_length,
     OAuth2TokenRequest, OAuth2HandleToken, OAuth2HandleError);
 
+/**
+ * Helper macros
+ */
+
+#define MAKE_OAUTH2_PASSWORD_REQUEST(username, password, client_id, request) \
+OAuth2Credentials credentials = { username, strlen(username), password, strlen(password), client_id, strlen(client_id) }; \
+request.type = OAUTH2_GRANT_TYPE_PASSWORD; \
+request.credentials = credentials; \
+
+#define MAKE_OAUTH2_TOKEN_REQUEST(type, ...) \
+if (type == OAUTH2_GRANT_TYPE_PASSWORD) { MAKE_OAUTH2_PASSWORD_REQUEST(__VA_ARGS__) } \
+
+#define GET_OAUTH2_TOKEN(url, request, success_handler, error_handler) \
+request_oauth2_token(url, strlen(url), request, success_handler, error_handler); \
+
 #endif // SIREL_OAUTH2_REQUEST_H
