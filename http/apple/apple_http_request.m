@@ -1,4 +1,5 @@
 #import "apple_http_request.h"
+#import "http_request.h"
 
 NSDictionary *error_codes() {
   NSMutableDictionary *errors = [[NSMutableDictionary alloc] init];
@@ -14,19 +15,21 @@ NSString *c_string_to_ns_string(const char* str, size_t len) {
     return [[NSString alloc] initWithData:bytes_to_data(str, len) encoding:NSUTF8StringEncoding];
 }
 
-void create_http_request(HTTP_Request http_details, struct url_request_t **url_request) {
-  (*url_request)->native_request = [[NSMutableURLRequest alloc] initWithURL:[
+void create_http_request(
+    HTTPRequest http_details,
+    struct url_request_t **request) {
+  (*request)->native_request = [[NSMutableURLRequest alloc] initWithURL:[
       [NSURL alloc] initWithString:c_string_to_ns_string(http_details.url, http_details.url_length)]];
-  [(*url_request)->native_request setHTTPMethod:c_string_to_ns_string(http_details.method, http_details.method_length)];
+  [(*request)->native_request setHTTPMethod:c_string_to_ns_string(http_details.method, http_details.method_length)];
 }
 
-void send_http_request(struct url_request_t *request, received_http_response completion) {
+void send_http_request(struct url_request_t *request, handle_http_response completion, void *user) {
   NSMutableURLRequest *req = request->native_request;
   NSURLSession *shared = [NSURLSession sharedSession];
   NSURLSessionDataTask *task = [shared dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
     // Fill out the response struct
-    HTTP_Response resp;
+    HTTPResponse resp;
     NSHTTPURLResponse *http_url_response = (NSHTTPURLResponse *)response;
     resp.status_code = (int)http_url_response.statusCode;
 
@@ -35,7 +38,7 @@ void send_http_request(struct url_request_t *request, received_http_response com
     NSNumber *code = [NSNumber numberWithInt:[error code]];
     NSNumber *errorcode = errors[code];
 
-    completion(request, resp, errorcode, data.bytes, data.length);
+    completion(request, resp, data.bytes, data.length, errorcode, user);
   }];
   [task resume];
 }

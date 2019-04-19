@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void did_receive_token(SOA2_Token token) {
-
+void handle_token(OAuth2Token *token) {
+  printf("hello");
 }
 
-void did_receive_error(SOA2_Error error) {
+void handle_error(OAuth2Error *error) {
 
 }
 
@@ -18,10 +18,19 @@ int main(int argc, char *argv[]) {
   const char *password = "EvanKanye13";
   const char *client_id = "LDoQcyK47hhWiyhXRsRdMLsZROkRiq2A4WYh9TgA";
 
-  SOA2_request_access_token_with_credentials(
-      url, strlen(url), username, strlen(username),
-      password, strlen(password), client_id, strlen(client_id),
-      did_receive_token, did_receive_error);
+  OAuth2TokenRequest request;
+  request.type = OAUTH2_GRANT_TYPE_PASSWORD;
+  request.credentials.username = username;
+  request.credentials.username_length = strlen(username);
+  request.credentials.password = password;
+  request.credentials.password_length = strlen(password);
+  request.credentials.client_id = client_id;
+  request.credentials.client_id_length = strlen(client_id);
+
+  request_oauth2_token(url, strlen(url),
+                       request, handle_token, handle_error);
+
+  while (1) { }
 
   return 0;
 }
