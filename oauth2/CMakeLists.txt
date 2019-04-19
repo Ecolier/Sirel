@@ -9,3 +9,5 @@ set(sources oauth2_request.h
 
 add_library(${PROJECT_NAME} ${sources})
 target_link_libraries(${PROJECT_NAME} sirel_http)
+find_library(jsmn_lib libjsmn PATHS ${sirel_root_dir}/vendors/jsmn)
+target_link_libraries(${PROJECT_NAME} ${jsmn_lib})

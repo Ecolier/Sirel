@@ -1,5 +1,0 @@
-#ifndef SIREL_RESPONSE_H
-#define SIREL_RESPONSE_H
-
-
-#endif // SIREL_RESPONSE_H

@@ -5,16 +5,16 @@ project(sirel_http)
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 include_directories(${sirel_root_dir})
 
-set(sources http_request.h private/http_request.private.h)
+set(sources http_request.h)
 
 if (APPLE)
+    set(CMAKE_C_FLAGS "-x objective-c")
     list(APPEND sources
-            apple/http_request.apple.h
-            apple/http_request.apple.m)
+            apple/apple_http_request.h
+            apple/apple_http_request.m)
 endif ()
 
 add_library(${PROJECT_NAME} ${sources})
-target_link_libraries(${PROJECT_NAME} sirel_core)
 
 if (APPLE)
     target_link_libraries(${PROJECT_NAME}
