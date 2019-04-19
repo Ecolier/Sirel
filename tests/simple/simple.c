@@ -1,7 +1,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 #include "http/http_request.h"
+=======
+#include <sirel/core/core.h>
+>>>>>>> master
 
 void handle_response() {
   // handle the response here
